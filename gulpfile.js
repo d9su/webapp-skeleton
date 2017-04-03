@@ -6,7 +6,6 @@ var less = require('gulp-less');
 var cp = require('gulp-copy');
 var concat = require('gulp-concat');
 var merge = require('gulp-merge');
-var lazypipe = require('lazypipe');
 
 function getCompiledStylesheet() {
     var compilationStream = gulp.src('src/styles/**/*.less')
