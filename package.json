@@ -3,19 +3,44 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Rex Su",
-  "license": "ISC",
+  "license": "UNLICENSED",
+  "browserify": {
+    "transform": [
+      [
+        "lessify",
+        {
+          "auto-inject": false
+        }
+      ],
+      [
+        "stringify",
+        {
+          "appliesTo": {
+            "includeExtensions": [
+              ".html"
+            ]
+          },
+          "minify": true
+        }
+      ]
+    ]
+  },
   "devDependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-router": "^0.4.2",
+    "browserify": "^14.1.0",
+    "browserify-incremental": "^3.1.1",
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
     "gulp-copy": "^1.0.0",
-    "gulp-less": "^3.3.0",
-    "gulp-merge": "^0.1.1",
+    "gulp-rename": "^1.2.2",
     "gulp-watch": "^4.3.11",
-    "rimraf": "^2.6.1"
+    "insert-css": "^2.0.0",
+    "lessify": "^1.0.1",
+    "merge-stream": "^1.0.1",
+    "rimraf": "^2.6.1",
+    "stringify": "^5.1.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
